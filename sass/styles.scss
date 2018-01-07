@@ -1,0 +1,139 @@
+@import "compass";
+@import "partials/normalize";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/animaciones";
+
+.main{
+	width:100%;
+	overflow:hidden;
+	margin: 0;
+	margin-top: -75px;
+	position:fixed;
+	z-index: -1;
+}
+
+.carrusel{
+	width:300%;
+	margin: 0;
+	@include animation(slider 20s infinite linear);
+}
+
+.foto{
+	width:100/3*1%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 700px;
+	color: white;
+	float: left;
+}
+
+.primera{
+	background-image: url('../img/sticky-notes.jpg');
+	.caption{
+		position: relative;
+		left: 10%;
+		top: 30%;
+		p{
+			font-size: 2vw;
+		}
+	}
+}
+
+.segunda{
+	background-image: url('../img/chloes.jpg');
+	.caption{
+		position: relative;
+		left: 80%;
+		top: 40%;
+		p{
+			font-size: 2vw;
+		}
+	}
+}
+
+.tercera{
+	background-image: url('../img/lazy.jpg');
+	.caption{
+		color: black;
+		position: relative;
+		left: 10%;
+		top: 30%;
+		p{
+			font-size: 2vw;
+		}
+	}
+}
+
+.secundario{
+	width:100%;
+	background: white;
+	clear:both;
+}
+
+.productos{
+	margin: 720px auto 20px auto;
+
+	.columna{
+		width: 100/3*1%;
+		float: left;
+		box-sizing: border-box;
+		padding: 10px;
+		text-align: justify;
+		position: relative;
+		overflow: hidden;
+
+		.cabecera{
+			height: 80px;
+			margin: auto;
+			width: 80px;
+			background-size: 80px 80px;
+			background-repeat: no-repeat;
+		}
+
+		&:nth-child(2){
+			border-left: 1px solid black;
+			border-right: 1px solid black;
+		}
+
+		&:nth-child(1) .cabecera{
+			background-image: url('../img/user168.png');
+		}
+
+		&:nth-child(2) .cabecera{
+			background-image: url('../img/settings48.png');
+		}
+
+		&:nth-child(3) .cabecera{
+			background-image: url('../img/map35.png');
+		}
+
+		.fondo{
+			width: 26vw;
+			height: 17.33vw;
+			position: absolute;
+			background: rgba(orange,0.9);
+		}
+
+		img{
+			position: relative;
+			width: 26vw;
+			height: 17.33vw;
+			@include box-shadow(rgba(0,0,0,0.3) 0 7px 7px -2px inset, rgba(0,0,0,0.3) 0 5px 7px 0);
+			&:hover{
+				opacity: 0.3;
+			}
+		}
+	}
+}
+
+.social div, img{
+	@include transition-property(all);
+	@include transition-duration(0.5s);
+}
+
+@for $i from 4 through 9 {
+	.columna:nth-child(#{$i}) .fondo{
+		background-color: lighten(orange,90-$i*10);
+	}
+}

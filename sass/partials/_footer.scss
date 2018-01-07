@@ -1,0 +1,42 @@
+.footer{
+	clear:both;
+	background:grey;
+	width:100%;
+	height: 80px;
+
+	p{
+		margin-top: 25px;
+		margin-left: 15px;
+		float: left;
+		width: 50%;
+	}
+}
+
+.social{
+	width:40%;
+	float:right;
+
+	div{
+		float:right;
+		margin:15px;
+		background-repeat:no-repeat;
+		background-size: cover;
+		width: 50px;
+		height: 50px;
+		&:hover{
+			@include transform(rotate(720deg));
+		}
+	}
+
+	.fb{
+		background-image: url('../img/imagenes/facebook2.png');		
+	}
+
+	.tw{
+		background-image: url('../img/imagenes/twitter.png');
+	}
+
+	.ingr{
+		background-image: url('../img/imagenes/instagram19.png');
+	}
+}

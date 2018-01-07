@@ -1,0 +1,48 @@
+.social div{
+	@include transition-property(all);
+	@include transition-duration(0.5s);
+}
+
+@include keyframes(slider){
+
+	0%{
+		@include transform(translate(0px));
+	}
+
+	16%{
+		@include transform(translate(0px));
+	}
+
+	21%{
+		@include transform(translate(-100/3*1%));
+	}
+
+	37%{
+		@include transform(translate(-100/3*1%));
+	}
+
+	42%{
+		@include transform(translate(-100/3*2%));
+	}
+
+	58%{
+		@include transform(translate(-100/3*2%));
+	}
+
+	63%{
+		@include transform(translate(-100/3*1%));
+	}
+
+	79%{
+		@include transform(translate(-100/3*1%));
+	}
+
+	84%{
+		@include transform(translate(0px));
+	}
+
+	100%{
+		@include transform(translate(0px));
+	}
+
+}

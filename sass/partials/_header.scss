@@ -1,0 +1,25 @@
+.header{
+	background: rgba(#333,0.5);
+	width: 100%;
+	height: 75px;
+
+	h1{
+		@include text-shadow(rgba(black,0.8)2px 2px 0);
+		margin: 0px;
+		margin-left: 5%;
+		color: white;
+		font-weight: normal;
+
+		span:nth-child(1){
+			font-size: 1.3em;
+		}
+		span:nth-child(2){
+			@include transform(rotate(-90deg));
+			display: inline-block;
+			font-size: 1.4em; 
+		}
+		span:nth-child(3){
+			padding-left: 50px;
+		}
+	 }
+}
